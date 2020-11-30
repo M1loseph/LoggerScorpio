@@ -1,16 +1,20 @@
-#directionaries with bin and shit
+# vscode
 
-.vs/
-bin/
-bin-int/
-logs/
+.vscode/
 
 #CMake
 
 build/
 
+#dependencies
+
+dep/
+
 #visual studio files
 
+.vs/
+bin/
+bin-int/
 **.sln
 **.vcxproj
 **.vcxproj.filters

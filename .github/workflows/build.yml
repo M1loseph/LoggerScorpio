@@ -1,0 +1,25 @@
+name: BUILD
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: installdep
+      run: ./scripts/installdep.sh
+      env:
+        CC: /usr/bin/gcc-9 
+        CXX: /usr/bin/g++-9
+    - name: build
+      run: ./scripts/buildall.sh
+      env:
+        CC: /usr/bin/gcc-9 
+        CXX: /usr/bin/g++-9
